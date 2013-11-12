@@ -1,4 +1,4 @@
-Tutorial: Auto Layout Part 1 Sample Code
+Tutorial: Auto Layout Part 2 Sample Code
 ==================
 
 Using Auto Layout in Interface Builder can prove trying. While it works reasonably well when you declare constraints on simple views hierarchies, Auto Layout in IB has a couple of major limitations.
