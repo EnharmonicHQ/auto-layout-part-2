@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ENHViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eb1-9Q-gOe">
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="134" minValue="0.0" maxValue="480" translatesAutoresizingMaskIntoConstraints="NO" id="lSO-vl-ed8">
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="2" eventType="valueChanged" id="O5N-H0-NZF"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lSO-vl-ed8" firstAttribute="top" secondItem="Eb1-9Q-gOe" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ADr-Yd-Ojg"/>
+                                    <constraint firstAttribute="trailing" secondItem="lSO-vl-ed8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lpq-wY-OXI"/>
+                                    <constraint firstItem="lSO-vl-ed8" firstAttribute="leading" secondItem="Eb1-9Q-gOe" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="x6g-8K-nhP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecG-yB-kao">
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ecG-yB-kao" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="2Mb-hd-100"/>
+                            <constraint firstItem="ecG-yB-kao" firstAttribute="top" secondItem="3" secondAttribute="top" constant="352" id="FoA-Ns-J54"/>
+                            <constraint firstItem="ecG-yB-kao" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="PbR-O1-EgI"/>
+                            <constraint firstItem="ecG-yB-kao" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Q6r-gD-ffs"/>
+                            <constraint firstItem="Eb1-9Q-gOe" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="b7L-fI-rE6"/>
+                            <constraint firstItem="ecG-yB-kao" firstAttribute="top" secondItem="Eb1-9Q-gOe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eSU-Ep-tPc"/>
+                            <constraint firstItem="Eb1-9Q-gOe" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="tRA-4g-aL1"/>
+                            <constraint firstItem="Eb1-9Q-gOe" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="tfp-60-32E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="purpleView" destination="ecG-yB-kao" id="MDk-pT-g1o"/>
+                        <outlet property="redView" destination="Eb1-9Q-gOe" id="fhh-S2-Qss"/>
+                        <outlet property="slider" destination="lSO-vl-ed8" id="dJj-pp-8bz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ENHViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ENHViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sliderChanged:"/>
+                <relationship kind="outlet" name="purpleView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="redView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
